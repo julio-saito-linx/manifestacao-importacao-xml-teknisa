@@ -40,3 +40,21 @@ _Se a linha acima rodar rápido e responder 2 ou 3 significa que o seu servidor 
 - Teste o recém criado job clicando em "Construir agora" para este Job
 
 Se tudo der certo você deverá receber a seguinte resposta:
+
+```
+Started by timer
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao
+[Manifestacao-Importacao] $ cmd /c call C:\Windows\TEMP\jenkins2844971601044394836.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>powershell.exe -Command "(New-Object -ComObject DFE59000.rdmSincronizaNFE).SincronizaAutomatica('')" 
+Configura‡Æo de e-mail do emitente inv lida.
+
+C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>exit 0 
+[Manifestacao-Importacao] $ cmd /c call C:\Windows\TEMP\jenkins6298446477288709057.bat
+
+C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>powershell.exe -Command "(New-Object -ComObject DFE51000.rdmImpConsXML).ImportacaoXML('','')" 
+2
+
+C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>exit 0 
+Finished: SUCCESS
+```
