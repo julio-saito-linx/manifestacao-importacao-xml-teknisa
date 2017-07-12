@@ -1,7 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>Executa estes dois métodos na sequencia fazendo que os XMLs sejam importados de hora em hora.&#xd;
+DFE59000.rdmSincronizaNFE.SincronizaAutomatica(&apos;&apos;)&#xd;
+DFE51000.rdmImpConsXML.ImportacaoXML(&apos;&apos;,&apos;&apos;)&#xd;
+</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
@@ -17,19 +20,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.BatchFile>
-      <command>powershell.exe -file &quot;C:\Program Files (x86)\Teknisa Web\Jenkins\DFE59000.rdmSincronizaNFE.SincronizaAutomatica.ps1&quot;</command>
+      <command>powershell.exe -Command &quot;(New-Object -ComObject DFE59000.rdmSincronizaNFE).SincronizaAutomatica(&apos;&apos;)&quot;&#xd;
+</command>
+    </hudson.tasks.BatchFile>
+    <hudson.tasks.BatchFile>
+      <command>powershell.exe -Command &quot;(New-Object -ComObject DFE51000.rdmImpConsXML).ImportacaoXML(&apos;&apos;,&apos;&apos;)&quot;</command>
     </hudson.tasks.BatchFile>
   </builders>
-  <publishers>
-    <hudson.tasks.BuildTrigger>
-      <childProjects>DFE51000.rdmImpConsXML.ImportacaoXML</childProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </hudson.tasks.BuildTrigger>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
 </project>
