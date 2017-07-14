@@ -35,7 +35,7 @@ _Se a linha acima rodar rápido e responder 2 ou 3 significa que o seu servidor 
 
 - Exponha a porta 211 pelo C:\Windows\SysWOW64\ScktSrvr.exe
 - Instale a versão mais recente o Jenkins e realize as configurações iniciais (se deseja acessar o jenkins de outras máquinas, exponha a porta 8080 no seu firewall do roteador - ou configuração do provedor da nuvem - e deixe configurado um usuário com senha forte)
-- Baixe o arquivo anexado e descompacte a pasta dentro de jobs do Jenkins (C:\Program Files (x86)\Jenkins\jobs)
+- Copie a pasta deste repositório para a pasta dentro de jobs no Jenkins (`C:\Program Files (x86)\Jenkins\jobs`) - faça o download por aqui: https://github.com/saitodisse/manifestacao-importacao-xml-teknisa/archive/master.zip
 - Em configurações do Jenkins use a opção "Recarregar configuração do disco"
 - Teste o recém criado job clicando em "Construir agora" para este Job
 
@@ -47,7 +47,7 @@ Building in workspace C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Impo
 [Manifestacao-Importacao] $ cmd /c call C:\Windows\TEMP\jenkins2844971601044394836.bat
 
 C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>powershell.exe -Command "(New-Object -ComObject DFE59000.rdmSincronizaNFE).SincronizaAutomatica('')" 
-Configura‡Æo de e-mail do emitente inv lida.
+Configuração de e-mail do emitente inválida.
 
 C:\Program Files (x86)\Jenkins\workspace\Manifestacao-Importacao>exit 0 
 [Manifestacao-Importacao] $ cmd /c call C:\Windows\TEMP\jenkins6298446477288709057.bat
